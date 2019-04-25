@@ -1,15 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
+using ShallowCopyDeepCopy.Model;
+using ShallowCopyDeepCopy.Reflection;
 
-namespace CSharpBasic
+namespace ShallowCopyDeepCopy
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            //var b = new DeepCloneSerialize();
+            Student s = new Student() { Age = 20, Id = 1, Name = "Emi" };
+            s.SetGrades(100, "数学");
+            #region 序列化实现深复制(二进制序列化,Newtonsoft.json 实现)
+            ////Student v = b.DeepCloneBinary(s);
+            ////Student v =b.DeepCloneNewtonsoft(s);
+            //JsonSerializerSettings mJsonSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+            //StudentSecond v = b.DeepCloneExchange<Student, StudentSecond>(s);
+            //Console.WriteLine($"深复制后的值v：{JsonConvert.SerializeObject(v)}");
+            //Console.WriteLine("========改变深复制的值=========");
+            //v.SetGrades(200, "语文");
+            //Console.WriteLine($"深复制改变后的值v:{JsonConvert.SerializeObject(v, mJsonSettings)}");
+            //Console.WriteLine($"深复制改变后的值s:{JsonConvert.SerializeObject(s)}");
+            //Console.WriteLine("========改变深复制的值=========");
+            #endregion
+
+            #region 反射实现深复制（注意对象间的调用导致栈溢出问题，互相引用对象的问题）
+            var a = new ReflectionDeepCopy();
+            Student student = a.DeepCopyReflection(s);
+            Console.WriteLine($"反射实现深复制{JsonConvert.SerializeObject(student)}");
+            student.SetGrades(300, "英语");
+            Console.WriteLine($"反射实现深复制改变后的值：{JsonConvert.SerializeObject(student)}");
+            Console.WriteLine($"反射实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
+
+
+            #endregion
+            #region 浅复制用.Net 自带接口ICloneable实现浅复制
+            //Student sss = (Student)s.Clone();
+            //Console.WriteLine($"浅复制后的值sss：{JsonConvert.SerializeObject(sss)}");
+            //sss.SetGrades(200, "语文");
+            //Console.WriteLine($"浅复制变化后的值sss,SetGrades变化后：{JsonConvert.SerializeObject(sss)}");
+            //Console.WriteLine($"浅复制变化后的值s：{JsonConvert.SerializeObject(s)}"); 
+            #endregion
+            Console.Read();
         }
     }
 }
