@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpressionTree\ExpressionDeepCopy.cs" />
     <Compile Include="Model\Grades.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Model\StudentSecond.cs" />
@@ -58,8 +59,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExpressionTree\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

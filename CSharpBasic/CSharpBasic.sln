@@ -1,9 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShallowCopyDeepCopy", "ShallowCopyDeepCopy\ShallowCopyDeepCopy.csproj", "{89709C0D-34F1-4923-A5DF-4DCF5CD4504C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefAndout参数", "RefAndout参数\RefAndout参数.csproj", "{E879A857-8DDB-4812-9482-BF3485ACEB5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkDotnet（测试代码性能）", "BenchmarkDotnet（测试代码性能）\BenchmarkDotnet（测试代码性能）.csproj", "{420D4D28-957A-4004-B9A4-F9EC68503004}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelperUnity", "HelperUnity\HelperUnity.csproj", "{056ED086-FC94-4F85-9AA2-981A53BD84AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "字符串不可变性和驻留机制", "字符串不可变性和驻留机制\字符串不可变性和驻留机制.csproj", "{4E11B518-B8E0-4CB0-9146-9A29F25703C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{07BAF160-E456-40C1-BF60-DC02D5F7455E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{89709C0D-34F1-4923-A5DF-4DCF5CD4504C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89709C0D-34F1-4923-A5DF-4DCF5CD4504C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89709C0D-34F1-4923-A5DF-4DCF5CD4504C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E879A857-8DDB-4812-9482-BF3485ACEB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E879A857-8DDB-4812-9482-BF3485ACEB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E879A857-8DDB-4812-9482-BF3485ACEB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E879A857-8DDB-4812-9482-BF3485ACEB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420D4D28-957A-4004-B9A4-F9EC68503004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420D4D28-957A-4004-B9A4-F9EC68503004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420D4D28-957A-4004-B9A4-F9EC68503004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420D4D28-957A-4004-B9A4-F9EC68503004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056ED086-FC94-4F85-9AA2-981A53BD84AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056ED086-FC94-4F85-9AA2-981A53BD84AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056ED086-FC94-4F85-9AA2-981A53BD84AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056ED086-FC94-4F85-9AA2-981A53BD84AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E11B518-B8E0-4CB0-9146-9A29F25703C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E11B518-B8E0-4CB0-9146-9A29F25703C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E11B518-B8E0-4CB0-9146-9A29F25703C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E11B518-B8E0-4CB0-9146-9A29F25703C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BAF160-E456-40C1-BF60-DC02D5F7455E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BAF160-E456-40C1-BF60-DC02D5F7455E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BAF160-E456-40C1-BF60-DC02D5F7455E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BAF160-E456-40C1-BF60-DC02D5F7455E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

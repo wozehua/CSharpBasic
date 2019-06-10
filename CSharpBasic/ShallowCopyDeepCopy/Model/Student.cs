@@ -8,13 +8,14 @@ namespace ShallowCopyDeepCopy.Model
         public int Id { get; set; }
         public int Age { get; set; }
         public Grades Grades{ get; set; }
+        private int MathGrade { get; set; }
 
         public Student()
         {
             Grades = new Grades();
         }
 
-        public void SetGrades(int math, string name)
+        public void SetGrades(int math, string name)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         {
             Grades.Math = math;
             Grades.Name = name;
