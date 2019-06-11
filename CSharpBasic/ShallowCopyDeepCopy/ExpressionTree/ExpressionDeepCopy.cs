@@ -19,6 +19,8 @@ namespace ShallowCopyDeepCopy.ExpressionTree
                 var properties = tOutTypeOf.GetProperties();
                 foreach (var item in properties)
                 {
+                    if (!item.CanWrite)
+                        continue;
                     var tInProp = tInTypeOf.GetProperty(item.Name);
                     if (tInProp != null)
                     {

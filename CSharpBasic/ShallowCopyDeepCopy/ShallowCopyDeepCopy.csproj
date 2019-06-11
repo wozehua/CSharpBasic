@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExpressionTree\ExpressionDeepCopy.cs" />
+    <Compile Include="ExpressionTree\ExpTransHelper.cs" />
     <Compile Include="Model\Grades.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Model\StudentSecond.cs" />
