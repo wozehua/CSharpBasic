@@ -9,11 +9,11 @@ namespace ShallowCopyDeepCopy.Reflection
 {
     public  class ReflectionDeepCopy
     {
-        public TOut DeepCopyReflection<TIn, TOut>(TIn tIn)
+        public TOut DeepCopyReflection<TIn, TOut>(TIn tIn,TOut tOut1) where TOut:class where TIn:class
         {
             var tInType = tIn.GetType();
-            //if (tIn is string || tInType.IsValueType) return ;
-            TOut tOut = Activator.CreateInstance<TOut>();
+            //if (tIn is string || tInType.IsValueType) return tOut as tIn;
+            var tOut = Activator.CreateInstance(tOut1.GetType());
             var a = tOut.GetType().GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance |
                                                  BindingFlags.Static);
             foreach (var itemOut in a)
@@ -26,7 +26,7 @@ namespace ShallowCopyDeepCopy.Reflection
                 }
             }
 
-            return tOut;
+            return (TOut)tOut;
         }
 
         public T DeepCopyReflection<T>(T obj)
@@ -36,7 +36,9 @@ namespace ShallowCopyDeepCopy.Reflection
                 //如果是字符串或值类型则直接返回
                 if (obj is string || obj.GetType().IsValueType) return obj;
 
-                var instance = Activator.CreateInstance<T>();
+                //var instance = Activator.CreateInstance<T>(); 这个方式是错误的。
+                //关键点是在这一步 这边创建了一个新的实例
+                var instance = Activator.CreateInstance(obj.GetType());
                 var fieldInfos = instance.GetType().GetProperties();
                 var fields = obj.GetType();
                 foreach (var item in fieldInfos)
@@ -56,6 +58,20 @@ namespace ShallowCopyDeepCopy.Reflection
                 Console.WriteLine(e);
                 return default(T);
             }
+        }
+
+        public static T DeepCopy<T>(T obj)
+        {
+            //如果是字符串或值类型则直接返回
+            if (obj is string || obj.GetType().IsValueType) return obj;
+            var newInstance = Activator.CreateInstance(obj.GetType());
+            FieldInfo[] fields = obj.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
+            foreach (var field in fields)
+            {
+                try { field.SetValue(newInstance, DeepCopy(field.GetValue(obj))); }
+                catch { }
+            }
+            return (T)newInstance;
         }
     }
 }

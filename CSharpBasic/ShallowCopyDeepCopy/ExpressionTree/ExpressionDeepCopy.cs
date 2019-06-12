@@ -13,7 +13,7 @@ namespace ShallowCopyDeepCopy.ExpressionTree
                 var tInTypeOf = typeof(TIn);
                 var tOutTypeOf = typeof(TOut);
                 //创建表达式数的节点，用于表示表达式树的参数或变量
-                ParameterExpression parameterExpression = Expression.Parameter(tInTypeOf, "deepCopy");
+                ParameterExpression parameterExpression = Expression.Parameter(tInTypeOf, nameof(tIn));
                 var memberBindings = new List<MemberBinding>();
                 //绑定属性
                 var properties = tOutTypeOf.GetProperties();
@@ -49,13 +49,12 @@ namespace ShallowCopyDeepCopy.ExpressionTree
                     }
                 }
 
-                var memberInitExpression = Expression.MemberInit(Expression.New(tOutTypeOf), memberBindings
-                    .ToArray());
+                var memberInitExpression = Expression.MemberInit(Expression.New(tOutTypeOf), memberBindings);
                 var lambda = Expression.Lambda<Func<TIn, TOut>>(memberInitExpression, parameterExpression);
                 //编译为可执行代码
                 var func = lambda.Compile();
                 //调用
-                return func.Invoke(tIn);
+                return func(tIn); 
             }
             catch (Exception ex)
             {
