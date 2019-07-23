@@ -9,6 +9,7 @@ namespace ShallowCopyDeepCopy
 {
     class Program
     {
+        //public event EventHandler<Student> a;
         static void Main()
         {
             //var b = new DeepCloneSerialize();
@@ -30,17 +31,18 @@ namespace ShallowCopyDeepCopy
             #region 反射实现深复制（注意对象间的调用导致栈溢出问题，互相引用对象的问题）
 
             #region DeepCopyReflection实现深反射
-            //var deep = new ReflectionDeepCopy();
-            //var second = new StudentSecond();
-            //var student = deep.DeepCopyReflection(s,second);
-            //student.SetStudentSecond(200, "语文");
-            //var a = new ReflectionDeepCopy();
-            ////Student student = a.DeepCopyReflection(s);
-            //Console.WriteLine($"反射实现深复制{JsonConvert.SerializeObject(student)}");
-            ////student.SetGrades(300, "英语");
-            //student.Age = 100;
-            //Console.WriteLine($"反射实现深复制改变后的值：{JsonConvert.SerializeObject(student)}");
-            //Console.WriteLine($"反射实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
+            var deep = new ReflectionDeepCopy();
+            var second = new StudentSecond();
+            var student = deep.DeepCopyReflection(s, second);
+            Console.WriteLine($"反射实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
+            student.SetStudentSecond(200, "语文");
+            var a = new ReflectionDeepCopy();
+            //Student student = a.DeepCopyReflection(s);
+            Console.WriteLine($"反射实现深复制{JsonConvert.SerializeObject(student)}");
+            //student.SetGrades(300, "英语");
+            student.Age = 100;
+            Console.WriteLine($"反射实现深复制改变后的值：{JsonConvert.SerializeObject(student)}");
+            Console.WriteLine($"反射实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
 
 
             #endregion
@@ -54,7 +56,7 @@ namespace ShallowCopyDeepCopy
             ////student.SetGrades(300, "英语");
             //student.Age = 100;
             //Console.WriteLine($"反射实现深复制改变后的值：{JsonConvert.SerializeObject(student)}");
-            //Console.WriteLine($"反射实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}"); 
+            //Console.WriteLine($"反射实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
             #endregion
 
             #region 使用DeepCopy<T>(T obj)实现深反射 完成（未实现类对象互相引用问题）
@@ -81,11 +83,11 @@ namespace ShallowCopyDeepCopy
             #region 用表达式树实现深反射
 
             //StudentSecond aa = ExpTransHelper<Student, StudentSecond>.Trans(s);
-            StudentSecond aa = ExpressionDeepCopy.ExpressionConvert<StudentSecond, Student>(s);
-            Console.WriteLine($"表达式树实现深复制{JsonConvert.SerializeObject(aa)}");
-            aa.SetStudentSecond(200, "语文");
-            Console.WriteLine($"表达式树实现深复制改变后的值：{JsonConvert.SerializeObject(aa)}");
-            Console.WriteLine($"表达式树实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
+            //StudentSecond aa = ExpressionDeepCopy.ExpressionConvert<StudentSecond, Student>(s);
+            //Console.WriteLine($"表达式树实现深复制{JsonConvert.SerializeObject(aa)}");
+            //aa.SetStudentSecond(200, "语文");
+            //Console.WriteLine($"表达式树实现深复制改变后的值：{JsonConvert.SerializeObject(aa)}");
+            //Console.WriteLine($"表达式树实现深复制改变后的s的值：{JsonConvert.SerializeObject(s)}");
             #endregion
             Console.Read();
         }

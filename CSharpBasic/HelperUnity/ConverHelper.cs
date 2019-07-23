@@ -26,7 +26,7 @@ namespace HelperUnity
                     if (dataTable.Rows.Contains(name) && prop.CanWrite)
                     {
                         object exchangeObj = row[name];
-                        Type type = ConvertHelper<T>.GetPropertyType(prop.PropertyType);
+                        Type type = GetPropertyType(prop.PropertyType);
                         if (prop.PropertyType.IsEnum)
                             prop.SetValue(convertModel, Enum.Parse(type, exchangeObj.ToString().Trim(), true));
                         else
@@ -47,8 +47,8 @@ namespace HelperUnity
         public static T Model(DataTable dt)
         {
             if (dt == null || dt.Rows.Count <= 0)
-                return default(T);
-            return ConvertHelper<T>.ToModel(dt.Rows[0]);
+                return default;
+            return ToModel(dt.Rows[0]);
         }
         /// <summary>
         /// 将DataRow 读取到的一行转换为Model
@@ -72,7 +72,7 @@ namespace HelperUnity
                         if (type.IsEnum)
                             prop.SetValue(obj1, Enum.Parse(type, obj2.ToString(), true),(object[])null);
                         else
-                            prop.SetValue(obj1, Convert.ChangeType(obj2, type), (object[])null);
+                            prop.SetValue(obj1, Convert.ChangeType(obj2, type), null);
                     }
                 }
             }
