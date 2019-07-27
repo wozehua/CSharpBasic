@@ -51,22 +51,49 @@ namespace DeletegateExample
             //} 
             #endregion
 
-            Action action = One;
-            action += Two;
-            try
-            {
-                //获取委托对象数组
-                Delegate[] delegates = action.GetInvocationList();
-                foreach (Action item in delegates)
-                {
-                    item();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+            #region Action泛型委托
+            //Action action = One;
+            //action += Two;
+            //try
+            //{
+            //    //获取委托对象数组
+            //    Delegate[] delegates = action.GetInvocationList();
+            //    foreach (Action item in delegates)
+            //    {
+            //        item();
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e);
+            //} 
+            #endregion
+
+            #region 事件--现在需要连接事件发布程序和订阅器
+            //通过+=创建一个订阅
+            //消费这daniel 通过“+=”订阅了事件
+            //接着消费者sebastian也订阅了事件
+            //然后sebastain 通过“-=”取消订阅事件
+            
+            //CarDealer作为一个发布程序。
+            //Consumer 作为一个侦听器（订阅器）
+            var dealer = new CarDealer();
+            var daniel = new Consumer("Daniel");
+            dealer.NewCarInfo += daniel.NewCarIsHere;
+            dealer.NewCar("Mercedes");
+            var sebastian = new Consumer("sebastian");
+            dealer.NewCarInfo += sebastian.NewCarIsHere;
+            dealer.NewCar("Ferrari");
+            dealer.NewCarInfo -= sebastian.NewCarIsHere;
+            dealer.NewCar("Red Bull Racing");
+
+            #endregion
             Console.Read();
+        }
+
+        private static void Dealer_NewCarInfo(object sender, CarInfoEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
