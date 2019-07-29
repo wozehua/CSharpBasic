@@ -60,7 +60,7 @@ namespace Array数组
             int sum = 0;
             foreach (var segment in segments)
             {
-                for (int i = segment.Offset; i < segment.Offset+segment.Count; i++)
+                for (var i = segment.Offset; i < segment.Offset+segment.Count; i++)
                 {
                     sum += segment.Array[i];
                 }
