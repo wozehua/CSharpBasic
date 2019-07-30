@@ -19,7 +19,7 @@ namespace Generics
 
         public Document GetDocument()
         {
-            Document document = null;
+            Document document;
             lock(this)
             {
                 document = _documents.Dequeue();

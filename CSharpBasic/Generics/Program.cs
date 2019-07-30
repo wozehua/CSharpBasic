@@ -33,7 +33,7 @@ namespace Generics
 
             var dm = new DocumentManager();
             ProcessDocuments.Start(dm);
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 var doc = new Document("content", $"Doc{i.ToString()}");
                 dm.AddDocument(doc);
