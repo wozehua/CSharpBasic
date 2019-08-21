@@ -5,12 +5,4 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="LinkedListNode.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="LookupSample\" />
-  </ItemGroup>
-
 </Project>

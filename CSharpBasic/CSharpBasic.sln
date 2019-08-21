@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array数组", "Array数组\Array数组.csproj", "{3722C091-72EE-46D2-8381-D2D5CF031DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeletegateExample", "DeletegateExample\DeletegateExample.csproj", "{B42956F0-E5C5-447B-8DB8-04E202BA71D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeletegateExample", "DeletegateExample\DeletegateExample.csproj", "{B42956F0-E5C5-447B-8DB8-04E202BA71D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialGenerics", "SpecialGenerics\SpecialGenerics.csproj", "{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B42956F0-E5C5-447B-8DB8-04E202BA71D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B42956F0-E5C5-447B-8DB8-04E202BA71D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B42956F0-E5C5-447B-8DB8-04E202BA71D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
