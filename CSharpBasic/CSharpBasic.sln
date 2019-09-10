@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array数组", "Array数组\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeletegateExample", "DeletegateExample\DeletegateExample.csproj", "{B42956F0-E5C5-447B-8DB8-04E202BA71D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialGenerics", "SpecialGenerics\SpecialGenerics.csproj", "{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecialGenerics", "SpecialGenerics\SpecialGenerics.csproj", "{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concurrent", "Concurrent\Concurrent.csproj", "{5BBBB9BE-70C0-4E23-9F2F-619D7BDBC931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{82FBD32A-4AFE-48A6-B868-644E9DF87714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2A328A6-5855-41E1-ACBA-F264AFF8DABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBBB9BE-70C0-4E23-9F2F-619D7BDBC931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBBB9BE-70C0-4E23-9F2F-619D7BDBC931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBBB9BE-70C0-4E23-9F2F-619D7BDBC931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBBB9BE-70C0-4E23-9F2F-619D7BDBC931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82FBD32A-4AFE-48A6-B868-644E9DF87714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82FBD32A-4AFE-48A6-B868-644E9DF87714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82FBD32A-4AFE-48A6-B868-644E9DF87714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82FBD32A-4AFE-48A6-B868-644E9DF87714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
