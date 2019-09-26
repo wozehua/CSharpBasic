@@ -63,7 +63,7 @@ namespace HelperUnity
             foreach (PropertyInfo prop in propertyInfos)
             {
                 string name = prop.Name;
-                if (dataTable.TableName.Contains(name) && prop.CanWrite)
+                if (dataTable.Rows.Contains(name) && prop.CanWrite)
                 {
                     object obj2 = dr[name];
                     if (obj2 != null && obj2 != DBNull.Value)
