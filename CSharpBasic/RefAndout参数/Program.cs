@@ -21,6 +21,7 @@ namespace RefAndout参数
             Console.WriteLine($"引用类型的X：{referenceA.X},{referenceValue},{referenceA.a}");
             #endregion
             Console.ReadKey();
+            
         }
         public static int Change(A a)
         {
