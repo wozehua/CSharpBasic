@@ -44,7 +44,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestReflection", "TestRefle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionSample", "ReflectionSample\ReflectionSample.csproj", "{78F0E16C-6AA9-43D8-9B12-E0EB4103C1D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCore3.0", "TestCore3.0\TestCore3.0.csproj", "{234162A8-C005-4506-949C-7F3ED529B613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCore3.0", "TestCore3.0\TestCore3.0.csproj", "{234162A8-C005-4506-949C-7F3ED529B613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internet", "Internet\Internet.csproj", "{57039515-9B88-4A59-8033-6669B5B4B9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpanAndMemory", "SpanAndMemory\SpanAndMemory.csproj", "{04C63328-11DB-4F24-BD2C-20E014085EF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +132,14 @@ Global
 		{234162A8-C005-4506-949C-7F3ED529B613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{234162A8-C005-4506-949C-7F3ED529B613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{234162A8-C005-4506-949C-7F3ED529B613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57039515-9B88-4A59-8033-6669B5B4B9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57039515-9B88-4A59-8033-6669B5B4B9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57039515-9B88-4A59-8033-6669B5B4B9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57039515-9B88-4A59-8033-6669B5B4B9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C63328-11DB-4F24-BD2C-20E014085EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C63328-11DB-4F24-BD2C-20E014085EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C63328-11DB-4F24-BD2C-20E014085EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C63328-11DB-4F24-BD2C-20E014085EF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
